@@ -35,8 +35,9 @@ include 'fetchdata.php';
             <td><?php echo $arr['uname']?></td>
             <td><?php echo $arr['upass']?></td>
             <td><?php echo $arr['uemail']?></td>
-            <th><a href="">Edit</th>
-            <th><a href="">Delete</th>
+            <th><a href="add-data.php?id=<?php echo $arr['userid'] ?>">Edit</th>
+            <th><a href="add-data.php?id=<?php echo $arr['userid']; ?>&name=<?php echo urlencode($arr['uname']); ?>">Delete</a></th>
+
         </tr>
      <?php } ?>
   </tbody>
