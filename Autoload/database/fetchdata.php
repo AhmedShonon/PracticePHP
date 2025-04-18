@@ -101,7 +101,7 @@ class queries extends database{
     }
 
 
-    public function deleteData($da,$id)
+    public function deleteData($id)
     {
        
 
@@ -144,9 +144,10 @@ $fetch_data = $obj->getData(); //in frontend we can print it
 
  //DELETE 
 
-   if(isset($_POST['delete']) && (isset($_GET['id']))){
-    $obj->deleteData($_POST,$_GET['id']);
+   if((isset($_GET['id']) && isset($_GET['name']))){
+    $obj->deleteData($_GET['id']);
     header("Location: view_data.php");
     exit;
  }
+
 ?>
